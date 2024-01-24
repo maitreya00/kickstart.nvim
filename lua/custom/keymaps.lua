@@ -61,3 +61,5 @@ keymap.set('', '<C-j>', '<Cmd>TmuxNavigateDown<CR>', { desc = 'Navigate Down' })
 keymap.set('', '<C-k>', '<Cmd>TmuxNavigateUp<CR>', { desc = 'Navigate Up' })
 keymap.set('', '<C-l>', '<Cmd>TmuxNavigateRight<CR>', { desc = 'Navigate Right' })
 keymap.set('', '<C-\\>', '<Cmd>TmuxNavigatePrevious<CR>', { desc = 'Previous Window' })
+
+keymap.set('', '<leader>f', '<Cmd>Format<CR>', { desc = 'Format current format' })
