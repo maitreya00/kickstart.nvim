@@ -38,6 +38,16 @@ keymap.set("n", "<C-6>", ":LualineBuffersJump! 6<cr>")
 keymap.set("n", "<C-7>", ":LualineBuffersJump! 7<cr>")
 keymap.set("n", "<C-8>", ":LualineBuffersJump! 8<cr>")
 keymap.set("n", "<C-9>", ":LualineBuffersJump! 9<cr>")
+-- make it work with tmux
+keymap.set("n", "<C-T>1", ":LualineBuffersJump! 1<cr>")
+keymap.set("n", "<C-T>2", ":LualineBuffersJump! 2<cr>")
+keymap.set("n", "<C-T>3", ":LualineBuffersJump! 3<cr>")
+keymap.set("n", "<C-T>4", ":LualineBuffersJump! 4<cr>")
+keymap.set("n", "<C-T>5", ":LualineBuffersJump! 5<cr>")
+keymap.set("n", "<C-T>6", ":LualineBuffersJump! 6<cr>")
+keymap.set("n", "<C-T>7", ":LualineBuffersJump! 7<cr>")
+keymap.set("n", "<C-T>8", ":LualineBuffersJump! 8<cr>")
+keymap.set("n", "<C-T>9", ":LualineBuffersJump! 9<cr>")
 
 -- telescope
 keymap.set("", "<C-p>", require("telescope.builtin").find_files)
