@@ -73,8 +73,8 @@ require('lazy').setup({
   {
     'tpope/vim-fugitive',
     init = function()
-      vim.keymap.set("n", "gs", vim.cmd.Git)
-      vim.keymap.set("n", "gp", ":Git push<cr>")
+      vim.keymap.set('n', 'gs', vim.cmd.Git)
+      vim.keymap.set('n', 'gp', ':Git push<cr>')
     end,
   },
   'tpope/vim-rhubarb',
@@ -94,7 +94,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim',       opts = {} },
+      { 'j-hui/fidget.nvim', opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -119,7 +119,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',  opts = {} },
+  { 'folke/which-key.nvim', opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -205,49 +205,48 @@ require('lazy').setup({
   },
 
   {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "arkav/lualine-lsp-progress" },
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'arkav/lualine-lsp-progress' },
     init = function()
-      local lualine = require("lualine")
-      lualine.setup({
+      local lualine = require 'lualine'
+      lualine.setup {
         options = {
-          globalstatus = true,
           icons_enabled = false,
-          section_separators = { left = "", right = "" },
-          component_seperators = { left = "", right = "" },
-          disabled_filetypes = {},
+          section_separators = { left = '', right = '' },
+          component_seperators = { left = '', right = '' },
+          disabled_filetypes = { 'NvimTree', 'TelescopePrompt' },
         },
         sections = {
           lualine_a = {
             {
-              "buffers",
+              'buffers',
               show_filename_only = true,
               mode = 2,
               symbols = {
-                modified = " ●",
-                alternate_file = "",
-                directory = "",
+                modified = ' ●',
+                alternate_file = '',
+                directory = '',
               },
             },
           },
           lualine_b = {},
           lualine_c = {},
-          lualine_x = { "lsp_progress" },
+          lualine_x = { 'lsp_progress' },
           lualine_y = {
             {
-              "diagnostics",
-              sources = { "nvim_diagnostic" },
+              'diagnostics',
+              sources = { 'nvim_diagnostic' },
               symbols = {
-                error = " ",
-                warn = " ",
-                info = "i",
-                hint = " ",
+                error = ' ',
+                warn = ' ',
+                info = 'i',
+                hint = ' ',
               },
             },
           },
-          lualine_z = { "progress" },
+          lualine_z = { 'progress' },
         },
-      })
+      }
     end,
   },
 
@@ -296,7 +295,7 @@ require('lazy').setup({
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
-  require 'kickstart.plugins.autoformat',
+  -- require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -370,14 +369,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
-local actions = require("telescope.actions")
+local actions = require 'telescope.actions'
 require('telescope').setup {
   defaults = {
     mappings = {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
-        ["<esc>"] = actions.close,
+        ['<esc>'] = actions.close,
       },
     },
   },
@@ -695,9 +694,9 @@ cmp.setup {
   },
 }
 
-require('custom.options')
-require('custom.keymaps')
-require('custom.autocmds')
+require 'custom.options'
+require 'custom.keymaps'
+require 'custom.autocmds'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
