@@ -217,7 +217,8 @@ require('lazy').setup({
           disabled_filetypes = { 'NvimTree', 'TelescopePrompt' },
         },
         sections = {
-          lualine_a = {
+          lualine_a = { 'branch' },
+          lualine_b = {
             {
               'buffers',
               show_filename_only = true,
@@ -229,7 +230,6 @@ require('lazy').setup({
               },
             },
           },
-          lualine_b = {},
           lualine_c = {},
           lualine_x = { 'lsp_progress' },
           lualine_y = {
@@ -551,8 +551,8 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
   -- See `:help K` for why this keymap
-  nmap('H', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-h>', vim.lsp.buf.signature_help, 'Signature Documentation')
+  nmap('T', vim.lsp.buf.hover, 'Hover Documentation')
+  nmap('<C-t>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
