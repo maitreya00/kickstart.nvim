@@ -73,8 +73,13 @@ require('lazy').setup({
   {
     'tpope/vim-fugitive',
     init = function()
+<<<<<<< HEAD
       vim.keymap.set('n', 'gs', vim.cmd.Git)
       vim.keymap.set('n', 'gp', ':Git push<cr>')
+=======
+      vim.keymap.set("n", "gs", vim.cmd.Git)
+      vim.keymap.set("n", "gp", ":Git push<cr>")
+>>>>>>> 6fefb96 (merge upstream/master)
     end,
   },
   'tpope/vim-rhubarb',
@@ -222,6 +227,7 @@ require('lazy').setup({
   },
 
   {
+<<<<<<< HEAD
     'nvim-lualine/lualine.nvim',
     dependencies = { 'arkav/lualine-lsp-progress' },
     init = function()
@@ -266,6 +272,51 @@ require('lazy').setup({
           lualine_z = { 'progress' },
         },
       }
+=======
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "arkav/lualine-lsp-progress" },
+    init = function()
+      local lualine = require("lualine")
+      lualine.setup({
+        options = {
+          globalstatus = true,
+          icons_enabled = false,
+          section_separators = { left = "", right = "" },
+          component_seperators = { left = "", right = "" },
+          disabled_filetypes = {},
+        },
+        sections = {
+          lualine_a = {
+            {
+              "buffers",
+              show_filename_only = true,
+              mode = 2,
+              symbols = {
+                modified = " ●",
+                alternate_file = "",
+                directory = "",
+              },
+            },
+          },
+          lualine_b = {},
+          lualine_c = {},
+          lualine_x = { "lsp_progress" },
+          lualine_y = {
+            {
+              "diagnostics",
+              sources = { "nvim_diagnostic" },
+              symbols = {
+                error = " ",
+                warn = " ",
+                info = "i",
+                hint = " ",
+              },
+            },
+          },
+          lualine_z = { "progress" },
+        },
+      })
+>>>>>>> 6fefb96 (merge upstream/master)
     end,
   },
 
@@ -388,14 +439,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
+<<<<<<< HEAD
 local actions = require 'telescope.actions'
+=======
+local actions = require("telescope.actions")
+>>>>>>> 6fefb96 (merge upstream/master)
 require('telescope').setup {
   defaults = {
     mappings = {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
+<<<<<<< HEAD
         ['<esc>'] = actions.close,
+=======
+        ["<esc>"] = actions.close,
+>>>>>>> 6fefb96 (merge upstream/master)
       },
     },
   },
@@ -716,9 +775,15 @@ cmp.setup {
   },
 }
 
+<<<<<<< HEAD
 require 'custom.options'
 require 'custom.keymaps'
 require 'custom.autocmds'
+=======
+require('custom.options')
+require('custom.keymaps')
+require('custom.autocmds')
+>>>>>>> 6fefb96 (merge upstream/master)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
