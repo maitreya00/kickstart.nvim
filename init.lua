@@ -228,8 +228,8 @@ require('lazy').setup({
       local lualine = require 'lualine'
       lualine.setup {
         options = {
-          theme = auto,
           globalstatus = true,
+          theme = 'auto',
           icons_enabled = false,
           section_separators = { left = '', right = '' },
           component_seperators = { left = '', right = '' },
