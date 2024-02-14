@@ -8,6 +8,7 @@ vim.opt.shiftwidth = 2
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.cmdheight = 0
+<<<<<<< HEAD
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevel = 99
@@ -15,6 +16,14 @@ vim.opt.winbar = '      %f'
 vim.opt.laststatus = 3
 vim.opt.relativenumber = true
 vim.opt.guicursor = ''
+=======
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99
+vim.opt.winbar = "      %f"
+vim.opt.laststatus = 3
+vim.opt.relativenumber = true
+>>>>>>> 6fefb96 (merge upstream/master)
 
 -- local hr = tonumber(os.date("%H", os.time()))
 -- if hr >= 6 and hr <= 19 then -- day between 6am and 9pm
