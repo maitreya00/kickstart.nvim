@@ -234,7 +234,11 @@ require('lazy').setup({
       local lualine = require 'lualine'
       lualine.setup {
         options = {
+<<<<<<< HEAD
           theme = 'auto',
+=======
+          theme = 'poimandres',
+>>>>>>> b250f47 (use onedark theme)
           icons_enabled = false,
           section_separators = { left = '', right = '' },
           component_seperators = { left = '', right = '' },
